@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { MenuItems } from "./MenuItems";
+import { CartWidget } from "./CartWidget.js";
 import "./Navbar.css"
 
 class Navbar extends Component {
@@ -19,7 +20,10 @@ class Navbar extends Component {
                                 </a>
                             </li>
                         )
-                    })}               
+                    })}
+                            <li> 
+                                <CartWidget />
+                            </li>               
                 </ul>
             </nav>
         )

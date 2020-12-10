@@ -29,7 +29,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(7, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -49,6 +49,18 @@
 }
 
 .nav-links:hover {
+  background-color: #fdb99b;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.CartWidget {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.CartWidget:hover {
   background-color: #fdb99b;
   border-radius: 4px;
   transition: all 0.2s ease-out;
