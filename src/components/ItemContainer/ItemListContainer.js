@@ -1,10 +1,14 @@
 import "./ItemListContainer.css"
+import ItemCount from "../ItemCount/ItemCount"
 
 const ItemListContainer = ({greeting}) => {
-    return ( 
-    <section className="ItemListContainer">{greeting}</section>
-    
+    return (
+    <div>
+        <section className="ItemListContainer">{greeting}</section>
+        <ItemCount />        
+    </div>
     )
 }
 
 export default ItemListContainer
+

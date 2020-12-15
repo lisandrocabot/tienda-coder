@@ -3,6 +3,8 @@ import { MenuItems } from "./MenuItems";
 import { CartWidget } from "./CartWidget.js";
 import "./Navbar.css"
 
+
+
 class Navbar extends Component {
     render () {
         return (
