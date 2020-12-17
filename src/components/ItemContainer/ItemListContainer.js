@@ -1,11 +1,12 @@
 import "./ItemListContainer.css"
-import ItemCount from "../ItemCount/ItemCount"
+import ItemDetailContainer from "./Item/ItemDetailContainer"
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     return (
     <div>
-        <section className="ItemListContainer">{greeting}</section>
-        <ItemCount />        
+        <section className="ItemListContainer">
+            <ItemDetailContainer />
+        </section>
     </div>
     )
 }

@@ -1,8 +1,4 @@
 .ItemListContainer {
-  background: #fdb99b;
-  height: 80px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  height: auto;
   font-size: 0.8em;
 }

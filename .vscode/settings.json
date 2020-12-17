@@ -1,3 +1,13 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.ignoreWords": [
+        "a",
+        "b",
+        "bf",
+        "cf",
+        "ef",
+        "fdb",
+        "right",
+        "to"
+    ]
 }
