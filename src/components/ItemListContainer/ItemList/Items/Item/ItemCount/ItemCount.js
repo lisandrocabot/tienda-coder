@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const ItemCount = () => {
   const [qty, setQty] = useState(1)  
-
-  const HandleClickRestar = () => {
+  
+    const HandleClickRestar = () => {
     if (qty > 1 ) {
       setQty(qty - 1)
     }
@@ -12,7 +12,7 @@ const ItemCount = () => {
   const onAdd = () => {
     return alert(`Has agregado ${qty} productos al Carrito`)
   }
-  
+
   return(
   <div>
         <button 

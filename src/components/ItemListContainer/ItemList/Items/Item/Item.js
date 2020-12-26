@@ -1,5 +1,4 @@
 import ItemCount from "./ItemCount/ItemCount"
-import {useState} from "react";
 
 const Item = ({title, detail, price}) => {
 
