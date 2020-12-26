@@ -1,11 +1,11 @@
 import "./ItemListContainer.css"
-import ItemDetailContainer from "./Item/ItemDetailContainer"
+import ItemList from "./ItemList/ItemList"
 
 const ItemListContainer = () => {
     return (
     <div>
         <section className="ItemListContainer">
-            <ItemDetailContainer />
+            <ItemList />
         </section>
     </div>
     )

@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import ItemListContainer from "./components/ItemContainer/ItemListContainer"
 import './App.css';
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <div className="App">
           <Navbar />
           <Hero />
-          <ItemListContainer />
+         <ItemListContainer />
         </div>
   );
 }

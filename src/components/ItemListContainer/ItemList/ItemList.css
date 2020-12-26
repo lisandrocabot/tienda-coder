@@ -1,0 +1,9 @@
+.ItemList ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ItemList li {
+  padding: 4rem;
+  text-align: center;
+}
