@@ -9,7 +9,7 @@ const ItemList = () => {
     const getProducts = new Promise((resolve) => {
         setTimeout(() => {
             resolve(Products);
-        }, 3000) 
+        }, 2000) 
         });
     
     useEffect(() =>{
@@ -27,8 +27,10 @@ const ItemList = () => {
                         <Item 
                             key={index}
                             title={product.title}
+                            picture={product.pictureUrl}
                             detail={product.detail}
-                            price={product.price} 
+                            price={product.price}
+
                         />
                     </li>
                 ))} 

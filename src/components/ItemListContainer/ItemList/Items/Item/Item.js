@@ -1,6 +1,6 @@
 import ItemCount from "./ItemCount/ItemCount"
 
-const Item = ({title, detail, price}) => {
+const Item = ({title, pictureUrl,detail, price}) => {
 
   return (
 
@@ -8,7 +8,7 @@ const Item = ({title, detail, price}) => {
 
       <div>
         <h3>{title}</h3>
-        <img src="https://placehold.it/350x350" alt="imagen de producto"/>
+        <img src={pictureUrl} alt="imagen de producto"/>
         <p>{detail}</p>
         <p>$ {price}</p>
       </div>
