@@ -1,5 +1,5 @@
 import Item from "./Items/Item/Item"
-import Products from "./Items/Item/Products";
+import { Products } from "./Items/Item/Products";
 import "./ItemList.css";
 import {useState, useEffect} from "react";
 
@@ -24,9 +24,8 @@ const ItemList = () => {
        
        <ul>
              { items.map((product, index) => (
-                    <li>
+                    <li key={index}>
                         <Item 
-                            key={index}
                             id={product.id}
                             title={product.title}
                             picture={product.pictureUrl}

@@ -1,12 +1,12 @@
 export const MenuItems = [
     {
         title: "Productos Destacados",
-        url: "featured-products",
+        url: "/featured-products",
         cName: "nav-links" 
     },
     {
         title: "Contact Us",
-        url: "#",
+        url: "/contact",
         cName: "nav-links" 
     },
     {

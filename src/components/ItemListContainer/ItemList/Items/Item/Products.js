@@ -1,9 +1,9 @@
 
-const Products = [
+export const Products = [
   {
     id: 1,
     title: "Camisa 1",
-    pictureUrl:"https://placehold.it/350x350",
+    pictureUrl:"src/assets/camisa_1.jpg",
     detail: "Camisa bordada oversize - Talle único",
     price: 3500,
   },
@@ -29,5 +29,3 @@ const Products = [
     price: 2900,
   }
   ];
-
-  export default Products
