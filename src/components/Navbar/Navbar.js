@@ -1,5 +1,6 @@
 import { MenuItems } from "./MenuItems";
 import { CartWidget } from "./CartWidget.js";
+import {Link} from "react-router-dom";
 import "./Navbar.css"
 
 
@@ -7,7 +8,7 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
         <nav className="NavbarItems"> 
-            <h1 className="navbar-logo">Fashion Website</h1>
+            <h1 className="navbar-logo"><Link to="/">Fashion Website</Link></h1>
             <div className="menu-icon">
             <img src="https://img.icons8.com/ios/50/ffffff/little-black-dress.png" alt="fashion-website-logo"/>
             </div>

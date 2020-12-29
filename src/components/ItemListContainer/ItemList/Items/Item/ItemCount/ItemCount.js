@@ -21,7 +21,7 @@ const ItemCount = () => {
       > - </button>
       <input type="text" value={qty} readOnly/>
       <button onClick={()=>{setQty(qty + 1)}}> + </button>
-      <button onClick={()=>{onAdd()}}>Agregar a carrito</button>
+      <button onClick={()=>{onAdd()}}>Agregar al carrito</button>
   </div>
  ) 
 }

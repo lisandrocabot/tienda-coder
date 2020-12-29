@@ -14,6 +14,7 @@ const ItemList = () => {
     
     useEffect(() =>{
         getProducts.then(rta => setItems(rta));
+        // eslint-disable-next-line
         }, []);
     
     return (
@@ -26,6 +27,7 @@ const ItemList = () => {
                     <li>
                         <Item 
                             key={index}
+                            id={product.id}
                             title={product.title}
                             picture={product.pictureUrl}
                             detail={product.detail}
@@ -36,7 +38,7 @@ const ItemList = () => {
                 ))} 
         </ul> :
             
-        <p> Cargando productos...</p>    
+        <p className="LoadingProducts"> Cargando productos...</p>    
         }
     
     </div>     

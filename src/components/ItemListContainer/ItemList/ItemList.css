@@ -3,7 +3,12 @@
   justify-content: space-between;
 }
 
-.ItemList li {
-  padding: 4rem;
+.ItemList img {
+  padding: 1rem;
+}
+
+.LoadingProducts {
+  font-size: 1.5rem;
   text-align: center;
+  padding: 2rem;
 }

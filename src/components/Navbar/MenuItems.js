@@ -1,22 +1,7 @@
 export const MenuItems = [
     {
-        title: "Men",
-        url: "#",
-        cName: "nav-links" 
-    },
-    {
-        title: "Women",
-        url: "#",
-        cName: "nav-links" 
-    },
-    {
-        title: "Accessories",
-        url: "#",
-        cName: "nav-links" 
-    },
-    {
-        title: "SALE!",
-        url: "#",
+        title: "Productos Destacados",
+        url: "featured-products",
         cName: "nav-links" 
     },
     {
