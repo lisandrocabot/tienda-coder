@@ -1,18 +1,19 @@
 import ItemCount from "../../ItemListContainer/ItemList/Items/Item/ItemCount/ItemCount"
 import { Link } from "react-router-dom"
+import "../ItemDetailContainer.css"
 
 const ItemDetail = ({Item}) => {
         
           return (
             <div className="ItemDetail">
               <h2>{Item.title}</h2>
-              <img src={Item.pictureUrl} alt="Imagen de producto"/>
+              <img src={`/${Item.pictureUrl}`} alt="Imagen de producto"/>
               <p>{Item.detail}</p>
               <p>$ {Item.price}</p>
               <br />
               <ItemCount />
               <br />
-              <button><Link to="/featured-products"> Regresar </Link></button>
+              <Link to="/camisas" className="ReturnButton"> Regresar </Link>
             </div>
     );
   }

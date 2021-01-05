@@ -6,7 +6,7 @@ const ItemListContainer = () => {
     return (
         <>
             <section className="ItemListContainer">
-                <h1 className="FeaturedProducts"> Productos Destacados </h1>
+                <h1 className="FeaturedProducts"> Camisas Bordadas </h1>
                 <ItemList />
             </section>
         </>

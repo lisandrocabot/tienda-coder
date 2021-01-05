@@ -1,17 +1,17 @@
 export const MenuItems = [
     {
-        title: "Productos Destacados",
-        url: "/featured-products",
+        title: "Camisas",
+        url: "/camisas",
         cName: "nav-links" 
     },
     {
-        title: "Contact Us",
+        title: "Accesorios",
+        url: "/accesorios",
+        cName: "nav-links" 
+    },
+    {
+        title: "Contacto",
         url: "/contact",
-        cName: "nav-links" 
-    },
-    {
-        title: "Sign Up",
-        url: "#",
         cName: "nav-links" 
     },
 ]

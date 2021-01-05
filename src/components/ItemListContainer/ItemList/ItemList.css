@@ -1,14 +1,38 @@
 .ItemList ul {
   display: flex;
   justify-content: space-between;
+  text-align: center;
+}
+
+.ItemDetail {
+  font-size: 1.2rem;
+}
+
+.ItemPrice {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .ItemList img {
   padding: 1rem;
+  height: 400px;
 }
 
 .LoadingProducts {
   font-size: 1.5rem;
   text-align: center;
   padding: 2rem;
+}
+
+.ItemCountInput {
+  margin: 0.5rem;
+  width: 2rem;
+  text-align: center;
+}
+.ItemCountButton {
+  width: 1rem;
+}
+
+.AddButton {
+  margin-bottom: 0.3rem;
 }

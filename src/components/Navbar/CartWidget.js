@@ -5,7 +5,7 @@ import "./Navbar.css"
 export function CartWidget () {
     return ( 
         //eslint-disable-next-line
-        <Link to="Cart" className="CartWidget" >
+        <Link to="cart" className="CartWidget" >
             <RiShoppingCartLine /> 
         </Link>
     )  

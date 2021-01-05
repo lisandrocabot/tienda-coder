@@ -8,9 +8,10 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
         <nav className="NavbarItems"> 
-            <h1 className="navbar-logo"><Link to="/">Fashion Website</Link></h1>
             <div className="menu-icon">
-            <img src="https://img.icons8.com/ios/50/ffffff/little-black-dress.png" alt="fashion-website-logo"/>
+            <Link to="/">
+                <img src="./images/WebLogo_white.png" alt="COembroidery-logo"/>  
+            </Link>
             </div>
             <ul className="nav-menu">
                 {MenuItems.map((item, index) => {

@@ -8,6 +8,7 @@ import Cart from "./components/Cart/Cart"
 import Error404 from "./components/Error404/index"
 import Footer from "./components/Footer/Footer"
 import Contact from "./components/ContactForm/index"
+import TermsBanner from './components/TermsBanner/TermsBanner';
 
 
 function App() {
@@ -16,9 +17,14 @@ function App() {
         <Navbar />
          <Switch>
           <Route exact path="/">
-              <Hero />
+              <Hero />          
+              <ItemListContainer />
+              <TermsBanner />
           </Route>
-          <Route path="/featured-products">
+          <Route path="/camisas">
+            <ItemListContainer />
+          </Route>
+          <Route path="/accesorios">
             <ItemListContainer />
           </Route>
           <Route path="/detail/:id">

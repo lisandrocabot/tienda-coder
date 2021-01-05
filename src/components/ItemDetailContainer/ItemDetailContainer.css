@@ -1,4 +1,9 @@
 .ItemDetail {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.ReturnButton {
+  font-size: 0.8em;
+  color: black;
 }

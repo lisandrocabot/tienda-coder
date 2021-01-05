@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import {Redirect} from "react-router-dom";
 
 const ItemCount = () => {
   const [qty, setQty] = useState(1)  
+  
+  const [redirect, setRedirect] = useState(false)
   
     const HandleClickRestar = () => {
     if (qty > 1 ) {
@@ -9,20 +12,26 @@ const ItemCount = () => {
     }
   }
 
-  const onAdd = () => {
-    return alert(`Has agregado ${qty} productos al Carrito`)
-  }
+  const HandleClickAdd = () => {
+    return (setRedirect(true))
+    }    
+
 
   return(
-  <div>
-        <button 
-      onClick={HandleClickRestar}
-      disabled={qty===1? "disable" : null}
-      > - </button>
-      <input type="text" value={qty} readOnly/>
-      <button onClick={()=>{setQty(qty + 1)}}> + </button>
-      <button onClick={()=>{onAdd()}}>Agregar al carrito</button>
-  </div>
+    <>
+    <div>
+          <button className="ItemCountButton"
+        onClick={HandleClickRestar}
+        disabled={qty===1? "disable" : null}
+        > - </button>
+        <input type="text" value={qty} readOnly className="ItemCountInput" />
+        <button onClick={()=>{setQty(qty + 1)}} className="ItemCountButton"> + </button>
+        <br />
+        <button onClick={HandleClickAdd} className="AddButton">Agregar al carrito</button>   
+    </div>
+
+   {redirect && <Redirect to='/cart' />}
+  </>
  ) 
 }
 
