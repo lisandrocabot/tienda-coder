@@ -9,7 +9,7 @@ const ItemList = () => {
     const getProducts = new Promise((resolve) => {
         setTimeout(() => {
             resolve(Products);
-        }, 2000) 
+        }, 1000) 
         });
     
     useEffect(() =>{
@@ -26,11 +26,7 @@ const ItemList = () => {
              { items.map((product, index) => (
                     <li key={index}>
                         <Item 
-                            id={product.id}
-                            title={product.title}
-                            picture={product.pictureUrl}
-                            detail={product.detail}
-                            price={product.price}
+                            item={product}
 
                         />
                     </li>

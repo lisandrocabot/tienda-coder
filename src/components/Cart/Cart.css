@@ -1,7 +1,18 @@
 .Cart {
   width: 25px;
+  display: flex;
 }
 
 .ReturnButton {
   color: black;
+  padding: 2rem;
+}
+
+.itemListado {
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.itemDatos {
+  width: 15rem;
 }

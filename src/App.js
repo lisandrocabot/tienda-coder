@@ -9,39 +9,46 @@ import Error404 from "./components/Error404/index"
 import Footer from "./components/Footer/Footer"
 import Contact from "./components/ContactForm/index"
 import TermsBanner from './components/TermsBanner/TermsBanner';
+import {Store} from "./store/Store"
+import {useState} from "react";
 
 
 function App() {
+
+  const [data, setData] = useState({items:[], cantidad: 0});
+  
   return (
-    <BrowserRouter>
-        <Navbar />
-         <Switch>
-          <Route exact path="/">
-              <Hero />          
+    <Store.Provider value={[data, setData]}>
+      <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+                <Hero />          
+                <ItemListContainer />
+                <TermsBanner />
+            </Route>
+            <Route path="/camisas">
               <ItemListContainer />
-              <TermsBanner />
-          </Route>
-          <Route path="/camisas">
-            <ItemListContainer />
-          </Route>
-          <Route path="/accesorios">
-            <ItemListContainer />
-          </Route>
-          <Route path="/detail/:id">
-            <ItemDetailContainer />
-          </Route>
-          <Route path="/cart">
-            <Cart />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="*">
-            <Error404 />
-          </Route>
-         </Switch>         
-     <Footer />   
-    </BrowserRouter>
+            </Route>
+            <Route path="/accesorios">
+              <ItemListContainer />
+            </Route>
+            <Route path="/detail/:id">
+              <ItemDetailContainer />
+            </Route>
+            <Route path="/cart">
+              <Cart />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>         
+        <Footer />   
+      </BrowserRouter>
+    </Store.Provider>
     
   );
 }

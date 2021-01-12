@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import {Redirect} from "react-router-dom";
+import React, {useState, useContext} from "react";
+import {Store} from "../../../../../../store/Store";
+import {useHistory} from 'react-router-dom';
 
-const ItemCount = () => {
-  const [qty, setQty] = useState(1)  
-  
-  const [redirect, setRedirect] = useState(false)
-  
+
+const ItemCount = ({item}) => {
+   const history = useHistory();
+   const [data, setData] = useContext(Store)
+   const [qty, setQty] = useState(1)  
+
     const HandleClickRestar = () => {
     if (qty > 1 ) {
       setQty(qty - 1)
@@ -13,10 +15,14 @@ const ItemCount = () => {
   }
 
   const HandleClickAdd = () => {
-    return (setRedirect(true))
+    setData({
+      ...data, 
+      cantidad: data.cantidad + qty,
+      items: [...data.items, item],
+    });
+    history.push('/cart');
     }    
-
-
+    
   return(
     <>
     <div>
@@ -29,8 +35,6 @@ const ItemCount = () => {
         <br />
         <button onClick={HandleClickAdd} className="AddButton">Agregar al carrito</button>   
     </div>
-
-   {redirect && <Redirect to='/cart' />}
   </>
  ) 
 }
