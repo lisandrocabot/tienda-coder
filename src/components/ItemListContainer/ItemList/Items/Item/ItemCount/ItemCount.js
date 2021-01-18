@@ -5,24 +5,36 @@ import {useHistory} from 'react-router-dom';
 
 const ItemCount = ({item}) => {
    const history = useHistory();
-   const [data, setData] = useContext(Store)
-   const [qty, setQty] = useState(1)  
+   const [cart, setCart] = useContext(Store)
+   const [qty, setQty] = useState(1)
 
     const HandleClickRestar = () => {
     if (qty > 1 ) {
       setQty(qty - 1)
     }
   }
+  const HandleClickAdd = () => {         
+          
+          if (cart.items.some(prod => prod.item.id === item.id)) {
+            const repetedId = cart.items.findIndex((prod) => {return prod.item.id === item.id});
+            cart.items[repetedId].cantProd = cart.items[repetedId].cantProd + qty;
+            setCart({
+              ...cart,
+              cantidad: cart.cantidad + qty,
+              items: [...cart.items]
+        })
 
-  const HandleClickAdd = () => {
-    setData({
-      ...data, 
-      cantidad: data.cantidad + qty,
-      items: [...data.items, item],
-    });
-    history.push('/cart');
-    }    
-    
+          }             
+          else {
+            setCart({
+              ...cart,
+              items: [...cart.items, {item: item, cantProd: qty}],
+              cantidad: cart.cantidad + qty,
+        })
+          }
+      history.push('/cart');
+      console.log(cart)
+}
   return(
     <>
     <div>

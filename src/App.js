@@ -15,10 +15,15 @@ import {useState} from "react";
 
 function App() {
 
-  const [data, setData] = useState({items:[], cantidad: 0});
+  const [cart, setCart] = useState({items:[], cantidad: 0});
   
   return (
-    <Store.Provider value={[data, setData]}>
+    
+    <Store.Provider 
+      value={[
+              cart, 
+              setCart]}>
+
       <BrowserRouter>
           <Navbar />
           <Switch>

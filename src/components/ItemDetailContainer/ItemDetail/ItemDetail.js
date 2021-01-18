@@ -11,7 +11,7 @@ const ItemDetail = ({Item}) => {
               <p>{Item.detail}</p>
               <p>$ {Item.price}</p>
               <br />
-              <ItemCount />
+              <ItemCount item={Item}/>
               <br />
               <Link to="/camisas" className="ReturnButton"> Regresar </Link>
             </div>
