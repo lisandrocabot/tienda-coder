@@ -68,10 +68,26 @@ a {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  position: relative;
 }
 
 .CartWidget:hover {
   background-color: #fdb99b;
   border-radius: 4px;
   transition: all 0.2s ease-out;
+}
+.CartWidget span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.9rem;
+  position: absolute;
+  right: -0.6rem;
+  top: -0.6rem;
+  background: white;
+  line-height: 5;
+  color: #e90917;
 }

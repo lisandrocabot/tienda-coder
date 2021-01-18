@@ -9,6 +9,7 @@ const Cart = () => {
 
     const totalPrice = cart.items.reduce((acc, curr) => acc + (curr.cantProd * curr.item.price), 0)
     const totalProd = cart.items.reduce((acc, curr) => acc + curr.cantProd, 0)
+    console.log(cart.items)
 
     const ClearAll = () => {
         setCart({items:[], cantidad: 0})
