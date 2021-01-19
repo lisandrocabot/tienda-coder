@@ -7,34 +7,35 @@ const ItemControl = ({productId}) => {
 
     const [cart, setCart] = useContext(Store)
     const totalProd = cart.items.reduce((acc, curr) => acc + curr.cantProd, 0)
+    
 
-const AddItem = () => {
-        cart.items[productId].cantProd ++
+    const AddItem = () => {
+            cart.items[productId].cantProd ++
+            setCart({
+                    ...cart,
+                    cantidad: cart.cantidad + 1,
+                    items: [...cart.items]
+                    }) 
+    }
+
+    const RemoveItem = () => {
+        if (cart.items[productId].cantProd > 0) {      
+        cart.items[productId].cantProd -- 
         setCart({
                 ...cart,
-                cantidad: cart.cantidad + 1,
+                cantidad: cart.cantidad --,
                 items: [...cart.items]
                 }) 
-}
-
-const RemoveItem = () => {
-    if (cart.items[productId].cantProd > 0) {      
-    cart.items[productId].cantProd -- 
-    setCart({
-            ...cart,
-            cantidad: cart.cantidad - 1,
-            items: [...cart.items]
-            }) 
-        };
-}
-const ClearItem = () => { 
-    cart.items.splice(productId, 1)
-    setCart({
-            ...cart,
-            cantidad: totalProd,
-            items: [...cart.items]
-            }) 
-        };
+            };
+    }
+    const ClearItem = () => { 
+        cart.items.splice(productId, 1)
+        setCart({
+                ...cart,
+                cantidad: totalProd,
+                items: [...cart.items]
+                }) 
+            };
 
 
 return (
