@@ -1,5 +1,5 @@
 import React, {useState, useContext} from "react";
-import {Store} from "../../../../../../store/Store";
+import {Store} from "../../../../../../Store/Store";
 import {useHistory} from 'react-router-dom';
 
 
@@ -21,7 +21,8 @@ const ItemCount = ({item}) => {
             setCart({
               ...cart,
               cantidad: cart.cantidad + qty,
-              items: [...cart.items]
+              items: [...cart.items],
+              precioTotal: cart.precioTotal + (cart.items[repetedId].price * qty),
         })
 
           }             
@@ -30,6 +31,7 @@ const ItemCount = ({item}) => {
               ...cart,
               items: [...cart.items, {item: item, cantProd: qty}],
               cantidad: cart.cantidad + qty,
+              precioTotal: cart.precioTotal + (item.price * qty),
         })
           }
       history.push('/cart');

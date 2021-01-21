@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {Store} from "../../store/Store"
+import {Store} from "../../Store/Store"
 
 
 

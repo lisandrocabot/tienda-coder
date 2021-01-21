@@ -5,17 +5,18 @@ import Hero from "./components/Hero/Hero";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart"
+import Checkout from "./components/Checkout/Checkout"
 import Error404 from "./components/Error404/index"
 import Footer from "./components/Footer/Footer"
 import Contact from "./components/ContactForm/index"
 import TermsBanner from './components/TermsBanner/TermsBanner';
-import {Store} from "./store/Store"
+import {Store} from "./Store/Store"
 import {useState} from "react";
 
 
 function App() {
 
-  const [cart, setCart] = useState({items:[], cantidad: 0});
+  const [cart, setCart] = useState({items:[], cantidad: 0, precioTotal: 0});
   
   return (
     
@@ -46,6 +47,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="/checkout">
+              <Checkout />
             </Route>
             <Route path="*">
               <Error404 />
