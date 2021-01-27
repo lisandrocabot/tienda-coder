@@ -17,7 +17,7 @@ import {useState} from "react";
 function App() {
 
   const [cart, setCart] = useState({items:[], cantidad: 0, precioTotal: 0});
-  
+
   return (
     
     <Store.Provider 
@@ -30,16 +30,19 @@ function App() {
           <Switch>
             <Route exact path="/">
                 <Hero />          
-                <ItemListContainer />
+                <ItemListContainer title="Productos Destacados" />
                 <TermsBanner />
             </Route>
-            <Route path="/camisas">
-              <ItemListContainer />
+            <Route exact path="/camisas">
+              <ItemListContainer title="Camisas Bordadas"/>
             </Route>
-            <Route path="/accesorios">
-              <ItemListContainer />
+            <Route exact path="/accesorios">
+              <ItemListContainer title="Accesorios Bordados"/>
             </Route>
-            <Route path="/detail/:id">
+            <Route exact path="/totebags">
+              <ItemListContainer title="Bags Bordadas"/>
+            </Route>
+            <Route path={["/camisas/:id", "/accesorios/:id", "/totebags/:id" ]}>
               <ItemDetailContainer />
             </Route>
             <Route path="/cart">

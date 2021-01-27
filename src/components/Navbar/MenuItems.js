@@ -8,6 +8,11 @@ export const MenuItems = [
         title: "Accesorios",
         url: "/accesorios",
         cName: "nav-links" 
+    },    
+    {
+        title: "Tote Bags",
+        url: "/totebags",
+        cName: "nav-links" 
     },
     {
         title: "Contacto",

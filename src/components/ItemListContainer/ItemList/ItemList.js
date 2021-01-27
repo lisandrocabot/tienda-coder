@@ -1,14 +1,22 @@
 import Item from "./Items/Item/Item"
 import "./ItemList.css";
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import {getFirestore} from "../../../db/index";
+import { useLocation } from "react-router-dom";
 
-const ItemList = () => {
+
+const ItemList = ({title}) => {
     const [items, setItems] = useState([]);
+    const category = useLocation().pathname.slice(1,)
     const db = getFirestore()
+    let filter = []
 
     const getProducts = () => {
-        db.collection("products").get()
+        category.length === 0 ? filter = ["featured", "==", true] : filter = ["category", "==", category]
+  
+        db.collection("products")
+        .where(filter[0],filter[1], filter[2]) 
+        .get()
         .then(docs => {
             let arr = [];
             docs.forEach(doc =>{
@@ -19,11 +27,11 @@ const ItemList = () => {
         .catch(e => console.log(e));
     }
     
-    useEffect(() =>{
-        getProducts();
-        // eslint-disable-next-line
-        }, []);
-    
+useEffect(() => {    
+    getProducts()
+    //eslint-disable-next-line
+}, [filter])
+
     return (
     <div className="ItemList">
        

@@ -14,7 +14,7 @@ const Item = ({id, item}) => {
       </div>
     
       <ItemCount item={item}/>
-      <Link to={`/detail/${id}`}> Ver más </Link>
+      <Link to={`/${item.category}/${id}`}> Ver más </Link>
     </>
     )
   }

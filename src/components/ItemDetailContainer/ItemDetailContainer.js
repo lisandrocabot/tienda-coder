@@ -5,10 +5,11 @@ import {useParams} from 'react-router-dom';
 import { getFirestore } from "../../db";
 
 const ItemDetailContainer = () => {
-    
     const [product, setProduct] = useState();
+  
     const { id } = useParams();
-    const db = getFirestore();  
+    
+    const db = getFirestore(); 
 
     useEffect(() => {
         db.collection("products").doc(id).get()
