@@ -40,9 +40,10 @@ const ItemControl = ({productId}) => {
 
 return (
     <>
-    <button onClick={AddItem}> + </button>
-    <button onClick={RemoveItem} > - </button>
-    <button onClick={ClearItem} > X </button>
+    <button className="qty-button" onClick={RemoveItem}> - </button>    
+    <input type="text" value={cart.items[productId].cantProd} readOnly className="ItemCountInput" />
+    <button className="qty-button" onClick={AddItem} > + </button>
+    <button className="qty-button" onClick={ClearItem} > x </button>
     </>
 
 

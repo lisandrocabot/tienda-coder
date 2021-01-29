@@ -6,8 +6,8 @@ import "./Cart.css"
 
 const Cart = () => {
     const [cart, setCart] = useContext(Store)
-    
-    const totalProducts = cart.items.reduce((acc, curr) => acc + curr.cantProd, 0)    
+
+    const totalProducts = cart.items.reduce((acc, curr) => acc + curr.cantProd, 0)
     const totalPrice = cart.items.reduce((acc, curr) => acc + (curr.cantProd * curr.item.price), 0)
 
     const ClearAll = () => {
@@ -15,35 +15,40 @@ const Cart = () => {
     }
 
    return(
-    <div className="Cart">
-        <h1>Carrito</h1>
-            { 
-            cart.items.length ? 
-               
-                <ul className="itemListado">
-                    <h2>Detalle de Producto</h2>
-                    { cart.items.map((item, index) => (                        
-                            <li key={index} className="itemDatos">
-                                <h4> Título: {item.item.title} </h4>
-                                <p> Precio: ${item.item.price} </p>
-                                <p> Cantidad: {item.cantProd} </p>
+    <section className="cart-section">
+        <div className="title-container">
+            <h1>Mi carrito</h1>
+        </div>
+            {
+            cart.items.length ?
+
+                <ul className="cart-container">
+                    { cart.items.map((item, index) => (
+                            <li key={index} className="cart-item">
+                                <img className="item-img"  src={`/${item.item.pictureUrl}`} alt={item.item.title} />
+                                <div className="item-details">
+                                    <h4 className="cart-title"> {item.item.title} </h4>
+                                    <p className="cart-price"> Precio: ${item.item.price} </p>
+                                </div>        
+
                                 <ItemsControl productId={cart.items.indexOf(item)}/>
-                            </li>                            
+                            </li>
                     ))}
 
                         <h2>Productos Totales: {totalProducts}</h2>
                         <h2>Precio Total: ${totalPrice}</h2>
-                    <button onClick={ClearAll}> Vaciar Carrito </button> 
-                    
-                    <Link to="/checkout" style={{color: "black"}}> Comprar </Link> 
+                    <button className="clearall-button" onClick={ClearAll}> Vaciar Carrito </button>
+
+                    <button className="regular-button"><Link to="/checkout" style={{color: "black"}}> COMPRAR </Link></button>
                 </ul>
-                : 
-                    <>
-                        <h3> Tu carrito esta vacío</h3>
-                        <Link to="/camisas" className="ReturnButton"> Regresar a la Tienda</Link>
-                    </>
+                :
+                    <div className="empty-cart">
+                        <h3 className="empty-cart-title"> Su carrito está vacio</h3>
+                        <p className="empty-cart-message"> Para seguir comprando, navegue por las categorías en el sitio. </p>
+                        <button className="regular-button"><Link to="/camisas"> ELEGIR PRODUCTOS </Link></button>
+                    </div>
     }
-       </div>
+       </section>
     )
 }
 

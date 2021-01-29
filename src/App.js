@@ -8,7 +8,7 @@ import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
 import Error404 from "./components/Error404/index"
 import Footer from "./components/Footer/Footer"
-import Contact from "./components/ContactForm/index"
+import Contact from "./components/ContactForm/ContactForm"
 import TermsBanner from './components/TermsBanner/TermsBanner';
 import {Store} from "./Store/Store"
 import {useState} from "react";

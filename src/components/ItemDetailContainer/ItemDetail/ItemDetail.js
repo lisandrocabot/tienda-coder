@@ -1,8 +1,9 @@
 import ItemCount from "../../ItemListContainer/ItemList/Items/Item/ItemCount/ItemCount"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import "../ItemDetailContainer.css"
 
 const ItemDetail = ({Item}) => {
+  const location = useLocation().pathname.split("/")
         
           return (
             <div className="ItemDetail">
@@ -13,7 +14,7 @@ const ItemDetail = ({Item}) => {
               <br />
               <ItemCount item={Item}/>
               <br />
-              <Link to="/camisas" className="ReturnButton"> Regresar </Link>
+              <Link to={`/${location[1]}`} className="ReturnButton"> Regresar </Link>
             </div>
     );
   }
