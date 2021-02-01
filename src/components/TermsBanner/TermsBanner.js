@@ -2,7 +2,7 @@ import "./TermsBanner.css";
 
 const TermsBanner = () => {
     return (
-        <div className="container">
+        <div className="banner-container">
             <div className="TermsContainer">
                 <h2 className="TermsTitle"> ENVÍOS Y ENTREGAS </h2>
                 <p className="TermsText"> Podrás elegir entre el envío a domicilio, envío a sucursal de correo o el retiro en cualquiera de nuestras tiendas, según disponibilidad.</p>
