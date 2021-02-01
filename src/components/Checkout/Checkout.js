@@ -3,6 +3,7 @@ import {Store} from "../../Store/Store"
 import {getFirestore} from "../../db/index"
 import firebase from "firebase/app";
 import {useHistory} from 'react-router-dom';
+import "./checkout.css"
 
 
 const Checkout = () => {  
@@ -35,31 +36,32 @@ const Checkout = () => {
         .then(({id}) => {
             console.log(id)
             setCart({items:[], cantidad: 0, precioTotal: 0})
-            alert(`FELICITACIONES! Realizaste tu compra. Tu numero de seguimiento es ${id}`)
-            history.push('/');
+            history.push('/purchase-succesful');
         })
         .catch(err => console.log(err))
   
     }
 
     return(
-        <section>
-            <div>
+        <section className="checkout-section">
+            <div className="title-container">
                 <h1> CHECKOUT </h1>
                     <h3>Estas comprando {totalProducts} productos. </h3>
                     <h3>Precio Total: $ {totalPrice}</h3>
-                <h2> DATOS DE FACTURACION </h2>
+                <h2> DATOS DE CONTACTO </h2>
                 <form onSubmit={handleSubmitForm}>
-                    <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
-                    <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" />
-                    <input type="email" value={formData.email} onChange={handleChangeInput}  name="email" placeholder="Correo Electrónico" />
-                    <input type="tel" value={formData.tel} onChange={handleChangeInput}  name="telefono" placeholder="Teléfono" />
-                    <button> Comprar </button>
-                </form>
+                    <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" required/>
+                    <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" required/>
+                    <input type="email" value={formData.email} onChange={handleChangeInput}  name="email" placeholder="Correo Electrónico" required/>
+                    <input type="tel" value={formData.tel} onChange={handleChangeInput}  name="telefono" placeholder="Teléfono" required/>
                 <h2> MÉTODO DE PAGO </h2>
-                <form>
-                    <input type="number" name="tarjeta" placeholder="Número de Tarjeta" />
-                    <input type="text" name="vencimiento" placeholder="Fecha de vencimiento" />
+                    <input type="number" name="tarjeta" placeholder="Número de tarjeta" required="required"/>
+                    <input type="text" name="vencimiento" placeholder="Titular de tarjeta" required/>
+                    <input type="month" name="vencimiento" placeholder="Vencimiento (MM/AA)" required/>
+                    <input type="number" maxlength="3" name="cvv" placeholder="CVV" required/>
+                    <input type="list" required/>
+                    <input type="number"  name="dni" placeholder="Documento del Titular" required/>
+                    <button className="regular-button"> REALIZAR PEDIDO </button>
                 </form>
                 
             </div>

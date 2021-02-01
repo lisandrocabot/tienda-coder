@@ -6,6 +6,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
+import PurchaseSuccesful from "./components/Checkout/PurchaseSuccesful"
 import Error404 from "./components/Error404/index"
 import Footer from "./components/Footer/Footer"
 import Contact from "./components/ContactForm/ContactForm"
@@ -53,6 +54,9 @@ function App() {
             </Route>
             <Route path="/checkout">
               <Checkout />
+            </Route>            
+            <Route path="/purchase-succesful">
+              <PurchaseSuccesful />
             </Route>
             <Route path="*">
               <Error404 />

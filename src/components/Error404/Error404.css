@@ -1,0 +1,20 @@
+.error-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
+.error-title-container {
+  margin: 0.8em;
+  font-size: 2.3em;
+  color: #fd6d77;
+  align-self: center;
+}
+
+.error-message {
+  margin: 0.8em;
+  font-size: 1.8em;
+  color: black;
+  align-self: center;
+}

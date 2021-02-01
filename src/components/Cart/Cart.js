@@ -21,26 +21,29 @@ const Cart = () => {
         </div>
             {
             cart.items.length ?
+                <div>
+                    <ul className="cart-container">
+                        { cart.items.map((item, index) => (
+                                <li key={index} className="cart-item">
+                                    <img className="item-img"  src={`/${item.item.pictureUrl}`} alt={item.item.title} />
+                                    <div className="item-details">
+                                        <h4 className="cart-title"> {item.item.title} </h4>
+                                        <p className="cart-price"> Precio: ${item.item.price} </p>
+                                    </div>        
 
-                <ul className="cart-container">
-                    { cart.items.map((item, index) => (
-                            <li key={index} className="cart-item">
-                                <img className="item-img"  src={`/${item.item.pictureUrl}`} alt={item.item.title} />
-                                <div className="item-details">
-                                    <h4 className="cart-title"> {item.item.title} </h4>
-                                    <p className="cart-price"> Precio: ${item.item.price} </p>
-                                </div>        
+                                    <ItemsControl productId={cart.items.indexOf(item)}/>
+                                </li>
+                        ))}
+                    </ul> 
 
-                                <ItemsControl productId={cart.items.indexOf(item)}/>
-                            </li>
-                    ))}
-
-                        <h2>Productos Totales: {totalProducts}</h2>
-                        <h2>Precio Total: ${totalPrice}</h2>
-                    <button className="clearall-button" onClick={ClearAll}> Vaciar Carrito </button>
-
-                    <button className="regular-button"><Link to="/checkout" style={{color: "black"}}> COMPRAR </Link></button>
-                </ul>
+                            <button className="clearall-button" onClick={ClearAll}> Vaciar Carrito </button>
+                            <div className="totals-container">
+                                <h3>Productos Totales: {totalProducts}</h3>
+                                <h2>Precio Total: ${totalPrice}</h2>
+                                <button className="regular-button"><Link to="/camisas"> CONTINUAR COMPRANDO </Link></button>
+                                <button className="regular-button"><Link to="/checkout" style={{color: "black"}}> FINALIZAR COMPRAR </Link></button>
+                            </div>
+                </div>
                 :
                     <div className="empty-cart">
                         <h3 className="empty-cart-title"> Su carrito está vacio</h3>

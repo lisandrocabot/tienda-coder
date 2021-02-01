@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react";
 import {Store} from "../../../../../../Store/Store";
 import {useHistory} from 'react-router-dom';
+import "./ItemCount.css";
 
 
 const ItemCount = ({item}) => {
@@ -43,9 +44,9 @@ const ItemCount = ({item}) => {
           <button className="ItemCountButton"
         onClick={HandleClickRestar}
         disabled={qty===1? "disable" : null}
-        > - </button>
+        >-</button>
         <input type="text" value={qty} readOnly className="ItemCountInput" />
-        <button onClick={()=>{setQty(qty + 1)}} className="ItemCountButton"> + </button>
+        <button onClick={()=>{setQty(qty + 1)}} className="ItemCountButton">+</button>
         <br />
         <button onClick={HandleClickAdd} className="AddButton">Agregar al carrito</button>   
     </div>
