@@ -1,6 +1,35 @@
 .checkout-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   height: 800px;
+}
+
+.purchase-details {
+  color: #e90917;
+}
+
+.checkout-container {
+  margin: 0.8em;
+  font-size: 1.2em;
+  color: #fd6d77;
+  align-self: center;
+}
+
+.title-form {
+  margin: 0.8em;
+  color: #fd6d77;
+  align-self: center;
+}
+
+.form-checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-checkout input {
+  padding: 0.1em;
+  margin: 0.3em;
 }

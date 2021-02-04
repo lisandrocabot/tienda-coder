@@ -6,14 +6,12 @@ const ItemDetail = ({Item}) => {
   const location = useLocation().pathname.split("/")
         
           return (
-            <div className="ItemDetail">
+            <div className="item-detail">
               <h2>{Item.title}</h2>
               <img src={`/${Item.pictureUrl}`} alt="Imagen de producto"/>
               <p>{Item.detail}</p>
               <p>$ {Item.price}</p>
-              <br />
               <ItemCount item={Item}/>
-              <br />
               <Link to={`/${location[1]}`} className="ReturnButton"> Regresar </Link>
             </div>
     );

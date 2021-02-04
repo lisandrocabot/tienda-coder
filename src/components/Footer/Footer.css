@@ -1,13 +1,13 @@
 .footer-container {
-  height: 90px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.3em;
   color: white;
-  border-top: #fff;
   outline: none;
+  padding-top: 1.6em;
 }
 
 .footer-section {
@@ -25,6 +25,7 @@
     #e90917
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  border-top: 1px solid #fff;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -37,6 +38,9 @@
   padding: 0.3em;
 }
 
+.formfooter {
+  padding: 0.3em;
+}
 .newsletter-form {
   width: 150%;
 }

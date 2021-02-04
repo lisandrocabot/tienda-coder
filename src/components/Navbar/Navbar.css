@@ -13,7 +13,7 @@
     #e90917
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  height: 100px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +23,10 @@
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
+  padding: 0.2em;
+  margin: 1.5em;
 }
 
 .navbar-logo,
@@ -42,10 +44,6 @@ a {
   width: 70vw;
   justify-content: end;
   margin-right: 2rem;
-}
-
-.navbar-logo {
-  padding: 1rem;
 }
 
 .nav-links {

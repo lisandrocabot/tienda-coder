@@ -1,6 +1,21 @@
-.ItemDetail {
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: auto;
   text-align: center;
-  padding: 1rem;
+}
+
+.item-detail h2,
+p {
+  padding: 0.2em;
+  margin: 0.2em;
+}
+
+.item-detail img {
+  height: auto;
+  width: 25%;
+  align-self: center;
 }
 
 .ReturnButton {

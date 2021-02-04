@@ -17,7 +17,7 @@ const Cart = () => {
    return(
     <section className="cart-section">
         <div className="title-container">
-            <h1>Mi carrito</h1>
+            <h1>MI CARRITO</h1>
         </div>
             {
             cart.items.length ?

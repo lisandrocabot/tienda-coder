@@ -15,10 +15,12 @@ const Footer = () => {
                 </div>
             </div>        
             <div>
-                <div> Suscribite al Newsletter </div>
-                <form >
-                    <input className="newsletter-form" type="email" placeholder="usuario@ejemplo.com" required/>
-                </form>
+                <p> Suscribite al Newsletter </p>
+                <div className="form-footer"> 
+                    <form >
+                        <input className="newsletter-form" type="email" placeholder="usuario@ejemplo.com" required/>
+                    </form>
+                </div>
             </div>
         </section>
         <div className="copyright"> Made by <a href="https://www.linkedin.com/in/lisandrocabot">Lisandro Cabot</a></div>
