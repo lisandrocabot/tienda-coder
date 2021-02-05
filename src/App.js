@@ -7,7 +7,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
 import PurchaseSuccesful from "./components/Checkout/PurchaseSuccesful"
-import Error404 from "./components/Error404/index"
+import Error404 from "./components/Error404/Error404"
 import Footer from "./components/Footer/Footer"
 import Contact from "./components/ContactForm/ContactForm"
 import TermsBanner from './components/TermsBanner/TermsBanner';
@@ -41,7 +41,7 @@ function App() {
               <ItemListContainer title="Accesorios Bordados"/>
             </Route>
             <Route exact path="/totebags">
-              <ItemListContainer title="Bags Bordadas"/>
+              <ItemListContainer title="Tote Bags Bordadas"/>
             </Route>
             <Route path={["/camisas/:id", "/accesorios/:id", "/totebags/:id" ]}>
               <ItemDetailContainer />
