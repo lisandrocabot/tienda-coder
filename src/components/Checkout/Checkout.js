@@ -3,7 +3,7 @@ import {Store} from "../../Store/Store"
 import {getFirestore} from "../../db/index"
 import firebase from "firebase/app";
 import {useHistory} from 'react-router-dom';
-import "./Checkout.css"
+import "./checkout.css"
 
 
 const Checkout = () => {  
