@@ -16,11 +16,17 @@
   color: #fd6d77;
   align-self: center;
 }
-
-.title-form {
+.title-checkout {
+  font-size: 1.8em;
   margin: 0.8em;
   color: #fd6d77;
   align-self: center;
+}
+
+.title-form {
+  font-size: 1.2rem;
+  margin: 1.2em;
+  color: #fd6d77;
 }
 
 .form-checkout {

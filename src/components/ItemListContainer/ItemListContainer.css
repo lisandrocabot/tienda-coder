@@ -1,4 +1,4 @@
-.ItemListContainer {
+.item-list-container {
   height: auto;
   font-size: 0.8em;
   background: #a770ef; /* fallback for old browsers */
@@ -16,14 +16,14 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.FeaturedProducts {
+.featured-products {
   font-size: 3.5rem;
   text-align: center;
   padding: 2rem;
   color: white;
 }
 
-.ItemList li {
+.item-list li {
   list-style-type: none;
   padding: 2rem;
   text-align: center;

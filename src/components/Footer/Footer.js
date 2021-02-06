@@ -1,4 +1,5 @@
 
+import {Link} from "react-router-dom"
 import "./Footer.css";
 import {SiFacebook, SiInstagram } from 'react-icons/si';
 
@@ -9,9 +10,9 @@ const Footer = () => {
         <section className="footer-section">
             <div> 
                 <p>CO Embroidery</p>
-                <div className="socialbuttons"> 
-                    <SiFacebook />
-                    <SiInstagram />
+                <div className="social-buttons"> 
+                    <Link to="#"><SiFacebook /></Link>
+                    <Link to="#"> <SiInstagram /> </Link>
                 </div>
             </div>        
             <div>

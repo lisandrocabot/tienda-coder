@@ -32,13 +32,13 @@
   justify-content: space-evenly;
   padding: 0.6em 0 0.6em 0;
 }
-.socialbuttons {
+.social-buttons {
   display: flex;
   justify-content: space-evenly;
   padding: 0.3em;
 }
 
-.formfooter {
+.form-footer {
   padding: 0.3em;
 }
 .newsletter-form {

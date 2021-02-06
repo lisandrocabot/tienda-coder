@@ -1,29 +1,36 @@
-.heroTitle {
-  text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 12em;
+.hero-section {
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.heroSubtitle {
-  text-align: center;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #c03734;
-  font-size: 500%;
-}
-
-.HeroImage {
+.hero-image {
   background: url("../../assets/Sale-banner.jpg");
-  height: 800px;
-  opacity: 0.5;
+  height: 850px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+}
+.hero-title {
+  color: white;
+  opacity: 0.5;
+  font-size: 8em;
+}
+
+.hero-button {
+  background-color: #fb8b93;
+  margin: 0.7em;
+  padding: 0.7em;
+  width: fit-content;
+  border-radius: 5px;
+  border: 1px solid #fb8b93;
+  outline: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+.hero-button:hover {
+  font-size: 1.6em;
 }

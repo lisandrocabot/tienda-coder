@@ -7,7 +7,7 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return (
-        <nav className="NavbarItems"> 
+        <nav className="navbar-items"> 
             <div className="menu-icon">
             <Link to="/">
                 <img src="./images/WebLogo_white.png" alt="COembroidery-logo"/>  

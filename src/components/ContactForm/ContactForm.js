@@ -42,7 +42,7 @@ const Contact = () => {
         <section className="form-section">
         <div className="form-container">
             <div className="title-container">
-                <h1>Formulario de contacto</h1>
+                <h1>¡CONTACTANOS!</h1>
             </div>
             <div className="input-container">
                 <form onSubmit={handleSubmitForm} className="contact-form">

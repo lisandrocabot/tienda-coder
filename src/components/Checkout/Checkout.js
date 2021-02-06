@@ -46,7 +46,7 @@ const Checkout = () => {
     return(
         <section className="checkout-section">
             <div className="checkout-container">
-                <h1 className="title-form"> CHECKOUT </h1>
+                <h1 className="title-checkout"> CHECKOUT </h1>
                     <h3 className="purchase-details">Estas comprando {totalProducts} productos. </h3>
                     <h3 className="purchase-details">Precio Total: $ {totalPrice}</h3>
                 <h2 className="title-form"> DATOS DE CONTACTO </h2>

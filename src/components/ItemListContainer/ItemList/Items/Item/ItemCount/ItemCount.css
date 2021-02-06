@@ -13,7 +13,7 @@
   width: 20%;
 }
 
-.ItemCountButton {
+.itemcount-button {
   display: inline-flex;
   justify-content: center;
   margin: 0.5em;
@@ -26,12 +26,12 @@
   font-size: 1.5em;
   cursor: pointer;
 }
-.ItemCountButton:hover {
+.itemcount-button:hover {
   color: rgb(0, 0, 0);
   font-weight: 900;
 }
 
-.ItemCountInput {
+.itemcount-input {
   width: 20%;
   outline: none;
   border-radius: 10%;
@@ -40,7 +40,7 @@
   vertical-align: middle;
   font-size: 1.2em;
 }
-.AddButton {
+.add-button {
   width: 40%;
   align-self: center;
   justify-self: center;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-.AddButton:hover {
+.add-button:hover {
   color: rgb(0, 0, 0);
   font-weight: 900;
   outline: none;

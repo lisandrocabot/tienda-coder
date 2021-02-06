@@ -1,12 +1,14 @@
 import "./Hero.css"
+import {Link} from "react-router-dom"
 
 const Hero = () =>  {
     return (
-        <div className="HeroImage"> 
-            <h1 className="heroTitle"> 
-                HUGE SALE
-            </h1>
-            <h2 className="heroSubtitle"> UP TO 70% OFF</h2>
+        <div className="hero-image">
+            <div className="hero-section"> 
+                <h1 className="hero-title"> NUEVAS</h1>
+                <h1 className="hero-title"> TOTE BAGS! </h1>
+                <button className="hero-button"> <Link to="/totebags">COMPRAR</Link></button>
+            </div>
         </div>
     )
 }

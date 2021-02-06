@@ -33,7 +33,7 @@ useEffect(() => {
 }, [filter])
 
     return (
-    <div className="ItemList">
+    <div className="item-list">
        
         { items.length ?
        
@@ -49,7 +49,7 @@ useEffect(() => {
                 ))} 
         </ul> :
             
-        <p className="LoadingProducts"> Cargando productos...</p>    
+        <p className="loading-products"> Cargando productos...</p>    
         }
     
     </div>     

@@ -1,38 +1,41 @@
-.ItemList ul {
+.item-list ul {
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
+.item-title {
+  font-size: 1.5rem;
+}
 
-.ItemDetail {
+.item-detail {
   font-size: 1.2rem;
 }
 
-.ItemPrice {
+.item-price {
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-.ItemList img {
+.item-list img {
   padding: 1.5rem;
   height: 400px;
 }
 
-.LoadingProducts {
+.loading-products {
   font-size: 1.5rem;
   text-align: center;
   padding: 2rem;
 }
 
-.ItemCountInput {
+.itemcount-input {
   margin: 0.5rem;
   width: 2rem;
   text-align: center;
 }
-.ItemCountButton {
+.itemcount-button {
   width: 1rem;
 }
 
-.AddButton {
+.add-button {
   margin-bottom: 0.3rem;
 }

@@ -5,8 +5,8 @@ const ItemListContainer = ({title}) => {
 
     return (
         <>
-            <section className="ItemListContainer">
-                <h1 className="FeaturedProducts"> {title}</h1>
+            <section className="item-list-container">
+                <h1 className="featured-products"> {title}</h1>
                 <ItemList title={title} />
             </section>
         </>

@@ -1,20 +1,23 @@
 .banner-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.TermsContainer {
-  padding: 1rem;
-  margin-left: 1rem;
+.terms-container {
+  width: 50%;
+  padding: 1em 1em 0 1em;
 }
 
-.TermsTitle {
+.terms-title {
   text-align: center;
-  padding: 1rem;
+  padding-bottom: 0.5em;
 }
 
-.TermsText {
+.terms-text {
   text-align: justify;
+  padding: -0.5em 0.5em;
+}
+li {
   list-style: none;
 }

@@ -12,7 +12,7 @@ const ItemDetail = ({Item}) => {
               <p>{Item.detail}</p>
               <p>$ {Item.price}</p>
               <ItemCount item={Item}/>
-              <Link to={`/${location[1]}`} className="ReturnButton"> Regresar </Link>
+              <Link to={`/${location[1]}`} className="return-button"> Regresar </Link>
             </div>
     );
   }

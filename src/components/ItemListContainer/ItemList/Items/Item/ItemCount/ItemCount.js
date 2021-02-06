@@ -42,14 +42,14 @@ const ItemCount = ({item}) => {
     <>
     <div className="itemcount-div">
         <div className="itemcount-buttons">
-          <button className="ItemCountButton"
+          <button className="itemcount-button"
           onClick={HandleClickRestar}
           disabled={qty===1? "disable" : null}
           > - </button>
-          <input type="text" value={qty} readOnly className="ItemCountInput" />
-          <button onClick={()=>{setQty(qty + 1)}} className="ItemCountButton"> + </button>
+          <input type="text" value={qty} readOnly className="itemcount-input" />
+          <button onClick={()=>{setQty(qty + 1)}} className="itemcount-button"> + </button>
         </div>  
-        <button onClick={HandleClickAdd} className="AddButton">Agregar al carrito</button>   
+        <button onClick={HandleClickAdd} className="add-button">Agregar al carrito</button>   
     </div>
   </>
  ) 
